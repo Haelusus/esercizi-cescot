@@ -13,7 +13,7 @@ p.classe-2:hover{
 div#spazi{
     background-color: pink;
     margin: 50px; /*esistono top, left, right, bottom*/
-    padding: ; /*spaziatura interna. top, bottom, left, bottom*/
+    padding: top; /*spaziatura interna. top, bottom, left, bottom*/
 }
 /*h1, h2, h3 hanno i loro margini. per toglierli bisogna mettere margin:0 a tutti
 border permette di specificare un unico bordo. stile(obbligatorio altrimenti non si vede. si usa solid solitamente), colore, width per spessore*/
