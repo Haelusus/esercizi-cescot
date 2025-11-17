@@ -49,7 +49,7 @@ display:none scompare completamente */
 .justify-center{justify-content: flex-end;} /*muove a destra*/
 
 /*permettono di riallineare il contenuto, come distribuire lo spazio*/
-.justiify-evenly{justify-content:space-evenly;} /*spazi uguali*/
+.justify-evenly{justify-content:space-evenly;} /*spazi uguali*/
 .justify-around{justify-content:space-around;} /*gli spazi agli estremi più piccoli*/
 .justify-between{justify-content:space-between;} /**/
 
