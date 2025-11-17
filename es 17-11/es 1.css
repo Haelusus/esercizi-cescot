@@ -6,4 +6,14 @@ p.classe-2:hover{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.5em; /*em calcola 1.5 x 16px inseriti in body*/
     font-weight: bold; /*spessità del font*/
+    text-decoration: underline; /*decorazioni: sottolineamento*/
+    text-align: left; /*posizione del testo*/
+    text-transform: uppercase; /*scegli se tutto in maiuscolo o no. Capitalize: la prima lettera di ogni parola è maiuscola*/
 }
+div#spazi{
+    background-color: pink;
+    margin: 50px; /*esistono top, left, right, bottom*/
+    padding: ; /*spaziatura interna. top, bottom, left, bottom*/
+}
+/*h1, h2, h3 hanno i loro margini. per toglierli bisogna mettere margin:0 a tutti
+border permette di specificare un unico bordo. stile(obbligatorio altrimenti non si vede. si usa solid solitamente), colore, width per spessore*/
