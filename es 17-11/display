@@ -1,5 +1,5 @@
 div > *:nth-child(1) {background-color: yellow;}
-div > *:nth-child(2) {background-color: orange}
+div > *:nth-child(2) {background-color: orange;}
 div > *:nth-child(3) {background-color: red;}
 div > *:nth-child(4) {background-color: brown;}
 
@@ -15,3 +15,47 @@ div.inline-block > *{
     display: inline-block; /*rimangono in linea*/
     width: 50px;
 }
+
+.none{
+    display: none;
+} 
+
+.hidden{
+    display: hidden;
+}
+
+/*display:none nasconde l'elemento. Differenza tra visibility:hidden nasconde l'elemento ma lascia il suo spazio, mentre 
+display:none scompare completamente */
+
+.opacity-0{
+    opacity: 0;
+}
+
+.flex{
+    display: flex;
+    background-color: pink;
+}
+
+.grow-1{ /*se sugli elementi: gli elementi si prendono tutto lo spazio*/
+    flex-grow: 1;
+}
+
+.grow-2{ 
+    flex-grow: 2;
+}
+
+.justify-center{justify-content: flex-start;} /*muove a sinistra*/
+.justify-center{justify-content: center;}
+.justify-center{justify-content: flex-end;} /*muove a destra*/
+
+/*permettono di riallineare il contenuto, come distribuire lo spazio*/
+.justiify-evenly{justify-content:space-evenly;} /*spazi uguali*/
+.justify-around{justify-content:space-around;} /*gli spazi agli estremi più piccoli*/
+.justify-between{justify-content:space-between;} /**/
+
+.direction-reverse{flex-direction: row-reverse;} /*inverte gli elementi*/
+
+.aligh-stretch {align-items: ;}
+.align-start{align-items: flex-start;}
+.align-center{align-items: center;}
+.align-end{align-items: flex-end;}
