@@ -33,7 +33,7 @@
     </div>
     <h2>display:flex</h2>
     <div class="flex justify-end direction-reverse">
-        <div class="grow-1">1</div>
+        <div class="grow-1" style="order: initial;">1</div> <!--order cambia l'ordine degli elementi-->
         <div class="grow-2">2</div>
         <div class="grow-3">3</div>
         <div class="grow-4">4</div>
