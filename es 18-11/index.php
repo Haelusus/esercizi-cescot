@@ -47,5 +47,36 @@
     if($array_3["eta"] == "21") {}//questa condizione è VERA
     if($array_3["eta"] === 21) {}//questa condizione è VERA
     if($array_3["eta"] === "21") {}//questa condizione è FALSA
+  
+    /** operatori logici
+     * and-> and o &&
+     * or -> or o ||
+     * xor -> xor 
+     * not -> !
+    **/
+
+    if(true or false):
+        echo "condizione vera";
+    else:
+
+
+    $persona_1 = array{
+        "nome" => "luca",
+        "cognome" => "rossi",
+        "telefono" => ""
+    };
+
+    $persona_2 = array{
+        "nome" => "lorenza",
+        "cognome" => "verdi"
+    };
+
+    if($persona_1["telefono"] != "");
+    echo "tel: ";
+    echo $persona_1["telefono"];
+    endif;
+
+    if(array_key_exists("telefono", $persona_2) && $persona_2)
+
 
 ?>
