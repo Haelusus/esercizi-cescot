@@ -1,0 +1,70 @@
+<?php
+$valori = [5, 6, 43, 23, 45, 654, 2, 4];
+
+$alto = 0;
+$fine = false;
+
+for ($i=0;$i<count($alto);$i++):
+    if($valori[$i] > $alto):
+        $alto = $valori[$i];
+    endif;
+endfor;
+
+echo "il valore piu alto è " . $alto;
+?>
+
+
+<?php
+$valori = [5, 6, 43, 23, 45, 654, 2, 4];
+
+$output = "" :
+
+$i = 0;
+while ($valori[$i] < 15):
+    $output .= $valori[$i] . "" ;
+    $i++;
+endwhile;
+?>
+
+
+<?php
+$maggiorenne = "eta" => 18;
+$somma = 0;
+
+$persone = [
+    array(
+        "nome" => "mario",
+        "eta" => 19
+    ),
+    array(
+        "nome" => "sofia",
+        "eta" => 34
+    ),
+    array(
+        "nome" => "marco",
+        "eta" => 6
+    ),
+    array(
+        "nome" => "emanuele",
+        "eta" => 23
+    ),
+    array(
+        "nome" => "filippo",
+        "eta" => 28
+    ),
+    array(
+        "nome" => "giulia",
+        "eta" => 20
+    ),
+    
+];
+
+/**per ogni persona maggiorenne stampare il nome */
+for($i=0;$i<count($persone);$i++):
+    if ($persone == $maggiorenne):
+        $somma += $maggiorenne[$i];
+    endif;
+endfor;
+
+echo ""
+?>
