@@ -28,7 +28,7 @@ endwhile;
 
 
 <?php
-$maggiorenne = "eta" => 18;
+$maggiorenne = 18;
 $somma = 0;
 
 $persone = [
@@ -56,15 +56,131 @@ $persone = [
         "nome" => "giulia",
         "eta" => 20
     ),
-    
 ];
 
-/**per ogni persona maggiorenne stampare il nome */
-for($i=0;$i<count($persone);$i++):
-    if ($persone == $maggiorenne):
-        $somma += $maggiorenne[$i];
+for($i = 0; $i < count($persone); $i++):
+    if ($persone[$i]["eta"] >= $maggiorenne):
+        echo $persone[$i]["nome"] . "<br>";
     endif;
 endfor;
+?>
 
-echo ""
+
+<?php
+$persone = [
+    array(
+        "nome" => "mario",
+        "eta" => 19
+        "voti" => [4,6,7,3]
+    ),
+    array(
+        "nome" => "sofia",
+        "eta" => 34
+        "voti" => [4,8,9,2]
+    ),
+    array(
+        "nome" => "marco",
+        "eta" => 29
+        "voti" => [10,9,9,4]
+    ),
+    array(
+        "nome" => "emanuele",
+        "eta" => 23
+        "voti" => [3,5,9,5]
+    ),
+    array(
+        "nome" => "filippo",
+        "eta" => 28
+        "voti" => [9,9,9,9]
+    ),
+    array(
+        "nome" => "giulia",
+        "eta" => 20
+        "voti" => [7,7,8,6]
+    ),
+];
+
+/** 
+* @param int[] voti
+* @return float media
+*/
+function calcola_media($voti){
+    $somma = 0;
+    for ($i = 0; $i < count($voti); $i++):
+        $somma += $voti[$i];
+    endfor;
+    $media = $somma / count($voti);
+    return $media;
+}
+
+foreach ($studenti as $studente) :
+    $media = calcola_media($studente['voti']):
+    echo $studente['nome'] . " ha una media di " .$media. ": ";
+    if ($media >= 6) :
+        echo "promosso";
+    else:
+        echo "bocciato";
+    endif;
+endforeach;
+
+function formatta_data($data){
+    $parti = explode(" ", $data);
+
+}
+
+echo formatta_data("monday 14 september 2025");
+
+function traduci_giorno_settimana($giorno){
+    switch(strtolower($giorno)){
+        case "monday" :
+            return "lunedi";
+        case "tuesday" :
+            return "martedi";
+        case "wednesday" :
+            return "mercoledi";
+        case "thursday" :
+            return "giovedi";
+        case "friday" :
+            return "venerdi";
+        case "saturday" :
+            return "sabato";
+        case "sunday" :
+            return "domenica";       
+    }
+}
+
+?>
+
+<?php
+
+/**data l'eta di una persona ritorna (vero o falso) se puo guidare il 125 (16 anni) */
+while ($eta[$i]){
+    if ($eta[$i] => 16):
+        return "vero";
+    else:
+        return "falso";
+    endif;
+}
+function guida_125($eta){
+    if ($eta >= 16)
+        return true;
+    else:
+        return false;
+    endif;
+
+} 
+
+/**dato un numero verifica se è divisibile per 3 */
+while($numero[$i]){
+    if ($numero[$i] / 3 ):
+        return "divisibile";
+    else:
+        return "non divisibile";
+    endif;
+}
+
+while ($numero[$i]){
+    if ($numero[$i])
+}
+
 ?>
