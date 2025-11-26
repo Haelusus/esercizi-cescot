@@ -92,3 +92,71 @@ console.log(d == true); //false
 console.log(e == true); //false
 console.log(d == e); //entrambi falsi quindi true
 console.log(d === e); //false perchè null è diverso da undefined
+
+//controlli di flusso
+var numero = window.prompt("inserisci un numero");
+
+if (numero % 2 == 0){
+    window.alert("numero pari");
+} else{
+    window.alert("numero dispari");
+}
+
+var mese = window.prompt("inserisci il numero del mese");
+
+switch (mese){
+    case "1":
+        window.alert("gennaio");
+    break;
+    case "2":
+        window.alert("febbraio");
+    break;
+    case "3":
+        window.alert("marzo");
+    break;
+    case "4":
+        window.alert("aprile");
+    break;
+    case "5":
+        window.alert("maggio");
+    break;
+    case "6":
+        window.alert("giugno");
+    break;
+    case "7":
+        window.alert("luglio");
+    break;
+    case "8":
+        window.alert("agosto");
+    break;
+    case "9":
+        window.alert("settembre");
+    break;
+    case "10":
+        window.alert("ottobre");
+    break;
+    case "11":
+        window.alert("novembre");
+    break;
+    case "12":
+        window.alert("dicembre");
+    break;
+    default:
+        window.alert("non valido");
+}
+
+console.log(document.getElementById("elemento-1"));
+console.log(document.getElementsByClassName("elementi")) //ritorna collezione di elementi
+console.log(document.getElementsByTagName('p')); //ritorna tutti gli elementi di tipo paragrafo
+
+console.log(document.querySelector('.elementi'));
+console.log(document.querySelectorAll('.elementi'));
+
+var lista = document.getElementById('genitore');
+console.log(lista.getElementsByClassName('figlio')); //3 figli
+
+lista.innerHTML = "<li>1</li><li class='figlio'>2</li>"; //permette di inserire html
+console.log(lista.getElementsByClassName('figlio')); //1 figlio
+
+lista.innerText = "<li>1</li><li class='figlio'>2</li>" //permette di inserire solo testo semplice, senza tag
+console.log(lista.getElementsByClassName('figlio')); //0 figli
