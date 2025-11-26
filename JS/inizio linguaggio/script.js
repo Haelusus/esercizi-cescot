@@ -1,7 +1,7 @@
 console.log("ciao, mondo!"); //stampa in console
 window.alert("benvenuto"); //pop up sullo schermo
 window.confirm("sei sicuro?") //pop up di conferma (ok o annulla). che ritorna true/false
-window.prompt("inserisci un numero") //chiede un'informazione
+window.prompt("inserisci un numero") //chiede informazione
 
 //dichiarazione di variabili
 var stringa1 = "ciao mondo"; //var globale, vibile sempre
