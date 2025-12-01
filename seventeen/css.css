@@ -1,0 +1,100 @@
+
+body {
+    font-family: Verdana, sans-serif;
+    background-color: #fffdd5;
+    margin: 0;
+    padding: 20px;
+}
+header {
+    background-color: pink;
+    border-radius: 50px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #e0a0b0;
+    text-align: center;
+}
+
+h1 {
+    font-family: fantasy, Verdana;
+    color: saddlebrown;
+    font-weight: bold;
+    font-size: 60px; 
+    margin: 10px 0;
+}
+.tab1 {
+    background-color: rgb(77, 58, 58);
+    border-radius: 50px;
+    padding: 20px;
+    margin: 0 auto; 
+    max-width: 800px;
+}
+.intro {
+    color: lightsteelblue;
+    font-size: 20px;
+    font-family: Verdana;
+    margin: 20px;
+    padding: 10px;
+    line-height: 1.5;
+}
+.tab2 {
+    grid-area: tab2;
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 30px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+.tab2 img {
+    width: 250px;
+    height: auto;
+    padding: 10px;
+}
+.tab3 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.tab3 img {
+    width: 100px;
+    height: auto;
+    opacity: 0.7;
+}
+button {
+    background-color: rgb(255, 249, 179);
+    font-size: 25px;
+    font-family: Verdana;
+    border-radius: 50px;
+    padding: 15px 40px;
+    border: 2px solid rgb(252, 168, 220);
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.3s;
+}
+button:hover {
+    background-color: orange;
+    color: white;
+}
+.stats {
+    font-size: 20px;
+    color: saddlebrown;
+    margin-bottom: 15px;
+}
+.msg {
+    font-size: 22px;
+    margin: 20px 0;
+    color: #333;
+    min-height: 60px; 
+}
+.premio-box {
+    background-color: rgb(255, 219, 219);
+    padding: 20px;
+    border-radius: 20px;
+    border: 5px dashed rgb(255, 172, 167);
+    animation: blink 1s infinite alternate;
+}
+@keyframes blink {
+    from { border-color: rgb(255, 255, 255); }
+    to { border-color: rgb(255, 247, 247); }
+}
