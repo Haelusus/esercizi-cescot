@@ -33,12 +33,32 @@ if (isset($_POST['next_round'])) {
 
 // 5. Azione: PESCA
 if (isset($_POST['pesca']) && !$_SESSION['round_over']) {
-    $carta = rand(1, 10);
+    
+    // --- LOGICA CARTE ALTE ---
+    if ($_SESSION['totale'] == 0) {
+        // È la prima carta: numero normale (1-10)
+        $carta = rand(1, 10);
+    } else {
+        // Dalla seconda carta in poi: numeri più alti (es. 4-10)
+        // Così il rischio di arrivare a 17 o superarlo aumenta
+        $carta = rand(4, 10); 
+    }
+
     $_SESSION['totale'] += $carta;
 
-    if ($_SESSION['totale'] >= 17) {
-        $_SESSION['msg'] = "Hai pescato un <strong>$carta</strong>.<br>Totale: " . $_SESSION['totale'] . "<br><span style='color:red; font-weight:bold;'>AHIA! Hai raggiunto il 17! Fallimento immediato.</span>";
+    // --- CONTROLLO SCONFITTA ---
+    
+    // CASO 1: ESATTAMENTE 17
+    if ($_SESSION['totale'] == 17) {
+        $_SESSION['msg'] = "Hai pescato un <strong>$carta</strong>.<br>Totale: " . $_SESSION['totale'] . "<br><span style='color:red; font-weight:bold; font-size:20px;'>LA SFORTUNA TI HA RAGGIUNTO</span>";
         $_SESSION['round_over'] = true; 
+    
+    // CASO 2: MAGGIORE DI 17 (SBALLATO)
+    } elseif ($_SESSION['totale'] > 17) {
+        $_SESSION['msg'] = "Hai pescato un <strong>$carta</strong>.<br>Totale: " . $_SESSION['totale'] . "<br><span style='color:red; font-weight:bold;'>Aia! Hai perso.</span>";
+        $_SESSION['round_over'] = true;
+    
+    // CASO 3: GIOCO CONTINUA
     } else {
         $_SESSION['msg'] = "Hai pescato un <strong>$carta</strong>.<br>Il tuo totale è: <strong>" . $_SESSION['totale'] . "</strong>";
     }
@@ -48,10 +68,10 @@ if (isset($_POST['pesca']) && !$_SESSION['round_over']) {
 if (isset($_POST['stop']) && !$_SESSION['round_over']) {
     if ($_SESSION['totale'] > 0) {
         $_SESSION['vittorie']++;
-        $_SESSION['msg'] = "Ti sei fermato a " . $_SESSION['totale'] . ".<br><span style='color:green; font-weight:bold;'>Bravo! Hai vinto questa mano.</span>";
+        $_SESSION['msg'] = "Ti sei fermato a " . $_SESSION['totale'] . ".<br><span style='color:green; font-weight:bold;'>Bravo! puoi continuare.</span>";
         $_SESSION['round_over'] = true;
     } else {
-        $_SESSION['msg'] = "Non puoi fermarti a 0! Pesca almeno una carta.";
+        $_SESSION['msg'] = "0 non è un opzione.";
     }
 }
 $ha_vinto_tutto = ($_SESSION['vittorie'] >= 3);
@@ -72,7 +92,7 @@ $ha_vinto_tutto = ($_SESSION['vittorie'] >= 3);
             <div class="tab1">
                 <p class="intro">
                     Alla ricerca di qualcosa per far passare la noia? Sei nella pagina giusta! Facciamo un gioco: 
-                    Ad ogni turno avremo delle carte con dei numeri. Mi raccomando non dobbiamo superare il 17. Attenzione però! Se hai 
+                    Ad ogni turno avremo delle carte con dei numeri. Il totale deve essere tra 12 e 16 e ATTENZIONE! Se hai 
                     come totale 17, è fallimento instantaneo. Se vinci tre partite avrai un premio!
                 </p>
             </div>
@@ -84,7 +104,7 @@ $ha_vinto_tutto = ($_SESSION['vittorie'] >= 3);
             <?php if ($ha_vinto_tutto): ?>
                 <div class="premio-box">
                     <h1> PREMIO RICEVUTO! <BR>HAI VINTO LA GLORIA!! </h1>
-                    <p style="color: black; font-size: 20px;">Complimenti! Hai vinto 3 partite.</p>
+                    <p style="color: black; font-size: 20px;">Congratulazioni. La Sfortuna non ti ha raggiunto</p>
                     <img src="https://media.tenor.com/MIP2p_k1-QcAAAAM/party-popper-joypixels.gif" style="width:150px;">
                     <br>
                     <form method="post">
