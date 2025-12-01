@@ -30,6 +30,7 @@ button{
     border: none;
     border-radius: 15px;
     padding: 10px 20px;
+    cursor: pointer;
 }
 img{
     width: 500px;
@@ -52,7 +53,7 @@ p{
     text-align: left;
     color: brown;
 }
-.immagini{
+.immagini, .immagini2{
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -64,8 +65,8 @@ footer{
     background-color: lightgray;
     margin-top: 20px;
 }
-.tab2 img:hover, .tab3 img:hover {
-    filter: brightness(60%);
-    transform: scale(1.05); /* Ingrandisce del 5% */
+.tab2 img:hover{
+    filter: brightness(50%);
+    transform: scale(1.05);
     cursor: pointer;
 }
