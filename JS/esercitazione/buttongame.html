@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            button{
+            position: absolute;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="click-me-button">cliccami!</button>
+        <form action="#" method="post"> <!--specifica l'URL della pagina che deve elaborare i dati inviati dall'utente quando il form viene sottomesso-->
+            <input type="text" placeholder="segnaposto" value="valore" required disabled /><br>
+            <!--required: richiede di riempire il campo con un popup
+            disbled: disablita il campo-->
+            <input id="email" type="email" placeholder="a@b.it"/><br>
+            <input id="password" type="password" placeholder="password"/><br>
+            <button id="show password">
+                mostra la password
+            </button>
+            <input type="tel" placeholder="333 123456"/><br>
+            <input type="number" placeholder="num"/><br>
+            <input type="date" placeholder="data"/><br>
+            <input type="time" placeholder="hh:mm"/><br>
+            <input type="file"/><br>
+
+            <p>sei maggiorenne?</p>
+            <input type="radio" name="radio-1" value="val-1" id="radio-1-1"/><br>
+            <label for="radio-1-1">si</label><br>
+            <input type="radio" name="radio-2" value="val-2" id="radio-1-2"/><br>
+            <label for="radio-1-2">no</label><br>
+            
+            <input type="checkbox" id="privacy" required/> <label for=" ho letto e accetto i termini e le condizioni di vendita"></label> <br>
+            <select>
+                <optgroup>
+                    <option value="val-1">valore 2</option>
+                </optgroup>
+            </select><br>
+            <textarea></textarea>
+            <button type="submit">invia <br> il modulo</button><br>
+            <button type="reset">reset</button><br>
+        </form>
+        <script src="buttongame.js"></script>
+    </body>
+</html>

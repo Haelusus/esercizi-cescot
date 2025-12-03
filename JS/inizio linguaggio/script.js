@@ -204,3 +204,4 @@ for (valore of array){
 for(chiave in oggetto){
     console.log(oggetto[chiave]);
 }
+
