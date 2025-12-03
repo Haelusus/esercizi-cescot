@@ -72,7 +72,7 @@ var somma = a + c;
 console.log(a + b); //somma
 console.log(a + c); //concatenazione: 2 attaccato a 1, diventa 21
 console.log(somma + b); //213
-console.log(somma.lenght > 212); //false perchè la stringa deve essere lunga almeno 213 caratteri
+console.log(somma.length > 212); //false perchè la stringa deve essere lunga almeno 213 caratteri
 console.log(somma > 20); // true perchè la somma viene convertita in numero
 console.log (a + b + c); //51
 
@@ -160,3 +160,47 @@ console.log(lista.getElementsByClassName('figlio')); //1 figlio
 
 lista.innerText = "<li>1</li><li class='figlio'>2</li>" //permette di inserire solo testo semplice, senza tag
 console.log(lista.getElementsByClassName('figlio')); //0 figli
+
+
+var voti = [4, 6 ,7 ,8, 6 ,8];
+var somma = 0;
+for (let i = 0; i < voti.length; i++){
+    somma += voti[i];
+}
+console.log("Media = " + (somma / voti.lenght));
+
+window.prompt("inserisci un numero");
+
+var elementi = [1, 2, 3, 4, 6, 7, 8, 9];
+
+let i = 0;
+let trovato = false;
+
+while (!trovato && i < elementi.lenght){
+    if ( numero == elementi[i]) {
+        trovato = true;
+    }
+    i++;
+}
+
+if(trovato){
+    console.log("elemento trovato");
+}else{
+    console.log("elemento non trovato");
+}
+
+var array = [1,2,3,4,5];
+var oggetto = {
+    nome : "luca",
+    cognome : "rossi"
+};
+
+//ciclo for of. funziona su elementi che hanno iterabiità (saltellare da un punto all'altro dell'array e poterci fare un ciclo sopra)
+for (valore of array){
+    console.log(valore);
+}
+
+//ciclo for in
+for(chiave in oggetto){
+    console.log(oggetto[chiave]);
+}
