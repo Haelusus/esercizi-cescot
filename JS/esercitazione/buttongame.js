@@ -13,7 +13,7 @@ showPasswordBtn.addEventListener('click',function(){
         showPasswordBtn.innerText = "nascondi";
     } else{
         passwordInput.setAttribute('type','password');
-        passwordInput.innerText
+        passwordInput.innerText = "mostra";
     }
     
 });
